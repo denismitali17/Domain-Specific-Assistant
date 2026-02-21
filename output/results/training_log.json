@@ -1,0 +1,72 @@
+{
+  "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "dataset": "medalpaca/medical_meadow_medical_flashcards",
+  "hardware": "Kaggle Tesla T4 (15.6 GB VRAM)",
+  "training_time_minutes": 17.6,
+  "final_training_loss": 0.6501,
+  "total_parameters": 1112664064,
+  "trainable_parameters": 12615680,
+  "trainable_percent": 1.1338,
+  "lora_config": {
+    "r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "bias": "none"
+  },
+  "training_config": {
+    "epochs": 2,
+    "per_device_train_batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "effective_batch_size": 16,
+    "learning_rate": 0.0002,
+    "lr_scheduler": "cosine",
+    "warmup_ratio": 0.05,
+    "optimizer": "adamw_torch",
+    "fp16": true,
+    "gradient_checkpointing": true,
+    "max_seq_length": 512
+  },
+  "dataset_stats": {
+    "total_raw_examples": 33955,
+    "valid_examples": 33543,
+    "training_examples": 3000,
+    "eval_examples": 200,
+    "mean_question_length_words": 14.6,
+    "mean_answer_length_words": 53.5
+  },
+  "gpu_memory": {
+    "before_training_allocated_gb": 2.08,
+    "before_training_reserved_gb": 2.18,
+    "after_training_allocated_gb": 2.14,
+    "after_training_reserved_gb": 4.12,
+    "total_vram_gb": 15.64
+  },
+  "evaluation_results": {
+    "eval_samples": 50,
+    "fine_tuned": {
+      "rouge1": 0.3282,
+      "rouge2": 0.146,
+      "rougeL": 0.2199,
+      "bleu1": 0.2603,
+      "bleu2": 0.1685,
+      "bleu4": 0.0902,
+      "perplexity": 2.29
+    },
+    "base_model": {
+      "rouge1": 0.3279,
+      "rouge2": 0.1488,
+      "rougeL": 0.2241,
+      "bleu4": 0.088,
+      "perplexity": 2.29
+    }
+  }
+}

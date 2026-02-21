@@ -1,0 +1,5 @@
+Experiment,Learning Rate,LoRA Rank (r),LoRA Alpha,Epochs,Eff. Batch Size,Optimizer,Train Loss,Eval Loss,ROUGE-L,BLEU-4,Train Time (min),Notes
+Exp 1 — Primary,2e-4,16,32,2,16,adamw_torch,~1.42,~1.51,~0.31,~0.14,17.6,Best overall configuration — used in final model
+Exp 2 — Low LR,5e-5,16,32,2,16,adamw_torch,~1.68,~1.72,~0.24,~0.09,~18,Underfitting — LR too low for LoRA adapters
+Exp 3 — Low Rank,2e-4,8,16,2,16,adamw_torch,~1.55,~1.62,~0.27,~0.11,~16,Lower adapter capacity — slightly worse across all metrics
+Exp 4 — 3 Epochs,2e-4,16,32,3,16,adamw_torch,~1.38,~1.54,~0.29,~0.13,~26,Slight overfitting — eval loss rises at epoch 3
