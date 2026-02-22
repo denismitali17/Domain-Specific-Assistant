@@ -10,9 +10,9 @@
 
 ## Live Demo
 
-**Public URL:** [https://huggingface.co/spaces/denismitali/medical-assistant](https://huggingface.co/spaces/denismitali/medical-assistant)
+**Public URL:** https://huggingface.co/spaces/denismitali/medical-assistant
 
-**Demo Video:** [INSERT VIDEO LINK HERE]
+**Demo Video:** https://youtu.be/tT5xeQcNWcw 
 
 ---
 
